@@ -6,8 +6,8 @@ class View extends Component {
     render() {
         return (
             <div className="home">
-               home
-               <NavLink to="/">home</NavLink>
+               home<br/>
+               <NavLink to="/">home</NavLink><br/>
                <NavLink to="/test">test</NavLink>
             </div>
         )

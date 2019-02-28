@@ -30,14 +30,4 @@ class Store {
         }
     ];
 }
-const age = observable.box(-1)
-autorun(() => {
-    if (age.get() < 0)
-        throw new Error("Age should not be negative")
-    console.log("Age", age.get())
-}, {
-    onError(e) {
-        window.alert("Please enter a valid age")
-    }
-})
 export default Store;

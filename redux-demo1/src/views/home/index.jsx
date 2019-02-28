@@ -18,6 +18,17 @@ class View extends Component {
     render() {
         console.log(this.props.otc)
         console.log(this.props.otc.total)
+
+        const age = observable.box(1)
+        autorun(() => {
+            if (age.get() < 0)
+            throw new Error("Age should not be negative")
+            console.log("Age", age.get())
+        }, {
+            onError(e) {
+                window.alert("Please enter a valid age")
+            }
+        })
         return (
             <div className="home">
                home<br/>
